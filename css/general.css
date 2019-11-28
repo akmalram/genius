@@ -328,8 +328,8 @@ button {
           box-shadow: 10px 10px 0 #111;
   -webkit-perspective: 100px;
           perspective: 100px;
-  -webkit-transition: all 300ms ease;
-  transition: all 300ms ease;
+  -webkit-transition: all 400ms ease;
+  transition: all 400ms ease;
 }
 
 .btn-primary:hover, .btn-primary:focus {

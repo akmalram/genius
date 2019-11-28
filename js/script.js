@@ -170,7 +170,7 @@ ready(() => {
 
 
 ready(() => {
-    new fullpage('#fullpage', {
+    const fullpg = new fullpage('#fullpage', {
         navigation: true,
         scrollingSpeed: 800,
         verticalCentered: false,
@@ -185,6 +185,10 @@ ready(() => {
             $('body').addClass(`active-section-${origin.index + 1}`);
         },
     });
+    if(screen.width < 1024) {
+        fullpg.destroy();
+        $('body').addClass('static');
+    }
 
 });
 

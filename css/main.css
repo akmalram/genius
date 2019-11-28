@@ -10,11 +10,11 @@
   left: 10vw;
 }
 
-body #fp-nav {
+body.static #fp-nav {
   display: none;
 }
 
-body .header {
+body.static .header {
   background: url(../img/header-bg.jpg) no-repeat center center;
   background-size: cover;
   -webkit-box-shadow: inset 0 0 1000rem 1000rem rgba(0, 0, 0, 0.4);
@@ -76,14 +76,6 @@ body:not(.static).active-section-3 .background-full .background-full-sections.co
 
 body:not(.static).active-section-4 .background-full .background-full-sections.advantages {
   opacity: 1;
-}
-
-@media only screen and (max-width: 1024) {
-  #fullpage .header {
-    background: url(../img/header-bg.jpg) no-repeat center center;
-    -webkit-box-shadow: inset 0 0 1000rem 1000rem rgba(0, 0, 0, 0.4);
-            box-shadow: inset 0 0 1000rem 1000rem rgba(0, 0, 0, 0.4);
-  }
 }
 
 #fullpage .section {

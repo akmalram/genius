@@ -205,6 +205,10 @@ button {
     -webkit-appearance: none;
 }
 
+::selection {
+    background: #000; /* WebKit/Blink Browsers */
+  }
+
 .btn-primary {
     color: #fff;
     font-size: 20px;

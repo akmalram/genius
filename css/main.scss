@@ -14,7 +14,7 @@
     }
 }
 
-body {
+body.static {
 
     #fp-nav {
         display: none;
@@ -103,15 +103,6 @@ body:not(.static) {
     &.active-section-4 {
         .background-full .background-full-sections.advantages {
             opacity: 1;
-        }
-    }
-}
-
-@media only screen and (max-width: 1024) {
-    #fullpage {
-        .header {
-            background: url(../img/header-bg.jpg) no-repeat center center;
-            box-shadow: inset 0 0 1000rem 1000rem rgba($color: #000000, $alpha: .4);
         }
     }
 }

@@ -312,6 +312,16 @@ button {
   -webkit-appearance: none;
 }
 
+::-moz-selection {
+  background: #000;
+  /* WebKit/Blink Browsers */
+}
+
+::selection {
+  background: #000;
+  /* WebKit/Blink Browsers */
+}
+
 .btn-primary {
   color: #fff;
   font-size: 20px;

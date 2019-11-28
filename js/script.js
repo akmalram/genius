@@ -180,16 +180,20 @@ ready(() => {
                 $('body').removeClass(`active-section-${i}`);
             }
             $('body').addClass(`active-section-${destination.index + 1}`);
+            $('body').removeClass(`animate-${origin.index + 1}`);
+        },
+        afterLoad: (a, direction) => {
+            $('body').addClass(`animate-${direction.index + 1}`);
         },
         afterRender: function(origin){
             $('body').addClass(`active-section-${origin.index + 1}`);
+            $('body').addClass(`animate-${origin.index + 1}`);
         },
     });
     if(screen.width < 1024) {
         fullpg.destroy();
         $('body').addClass('static');
     }
-
 });
 
 const fontAwesomeFreeObserver = new FontFaceObserver('Font Awesome 5 Free');

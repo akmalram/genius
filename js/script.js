@@ -7,11 +7,11 @@ const ready = (callback) => {
 ready(() => {
     const MenuClassToggler = () => {
         const btn = document.querySelector('.navbar .togglebtn');
-        // const menu = document.querySelector('.navbar .menu');
+        const menu = document.querySelector('.navbar .menu-modal');
 
         btn.addEventListener('click', () => {
             btn.classList.toggle('active');
-            // menu.classList.toggle('active');
+            menu.classList.toggle('active');
             // document.querySelector('body').classList.toggle('overhidden');
         });
     }

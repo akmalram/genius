@@ -1,0 +1,23 @@
+@mixin content-padding {
+    padding: 80px 0;
+
+    @media only screen and (max-width: 768px) {
+        padding: 60px 0;
+    }
+
+    @media only screen and (max-width: 768px) {
+        padding: 30px 0;
+    }
+}
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+$primary-color: #F7A024;
+$violet-color: #231E60;
+$yellow-color: #E1C65D;
+$blue-color: #003A9D;

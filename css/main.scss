@@ -1,0 +1,113 @@
+@import './mixins';
+#fp-nav {
+    ul li {
+        margin: 40px 0;
+
+        a span {
+            background: #fff;
+        }
+    }
+
+    &.fp-left {
+        left: 10vw;
+    }
+}
+
+body {
+
+    .background-full {
+        transition: all .3s ease;
+        position: fixed;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100vh;
+        box-sizing: border-box;
+        z-index: -1;
+    }
+    .background-full-sections {
+        position: absolute;
+        z-index: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        opacity: 0;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        will-change: opacity;
+        transition: opacity 0.8s ease;
+    }
+
+    .background-full-sections.header {
+        background-image: url(../img/header-bg.jpg);
+        box-shadow: inset 0 0 1000rem 1000rem rgba($color: #000000, $alpha: .4);
+    }
+
+    // .background-full-sections.about {
+
+    // }
+
+    // .background-full-sections.courses {
+
+    // }
+
+    // .background-full-sections.advantages {
+
+    // }
+
+
+    // Section 1 is active
+    &.active-section-1 {
+        .background-full .background-full-sections.header {
+            opacity: 1;
+        }
+    }
+
+    // Section 2 is active
+    &.active-section-2 {
+        #fp-nav ul li a span {
+            background-color: #000;
+        }
+        .background-full .background-full-sections.about {
+            opacity: 1;
+        }
+    }
+
+    // Section 3 is active
+    &.active-section-3 {
+        .background-full .background-full-sections.courses {
+            opacity: 1;
+        }
+    }
+
+    // Section 4 is active
+    &.active-section-4 {
+        .background-full .background-full-sections.advantages {
+            opacity: 1;
+        }
+    }
+}
+
+#fullpage .section {
+    opacity: 0;
+    will-change: opacity;
+    transition: opacity 0.8s ease;
+
+    &.active {
+        opacity: 1;
+    }
+
+    .section-content {
+        padding: 0 10vw;
+        box-sizing: border-box;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+}

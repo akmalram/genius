@@ -240,7 +240,19 @@ button {
     &:hover, &:focus {
         outline: none;
         box-shadow: 5px 5px 0 #111;
+    }
 
+    &.white {
+        background: #fff;
+        color: #000;
+        border-color: #fff;
+        box-shadow: 10px 10px 0 rgb(223, 223, 223);
+
+
+        &:hover, &:focus {
+            outline: none;
+            box-shadow: 5px 5px 0 #fff;
+        }
     }
 
     @media only screen and (max-width: 576px) {

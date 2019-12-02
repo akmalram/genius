@@ -365,6 +365,20 @@ button {
           box-shadow: 5px 5px 0 #111;
 }
 
+.btn-primary.white {
+  background: #fff;
+  color: #000;
+  border-color: #fff;
+  -webkit-box-shadow: 10px 10px 0 #dfdfdf;
+          box-shadow: 10px 10px 0 #dfdfdf;
+}
+
+.btn-primary.white:hover, .btn-primary.white:focus {
+  outline: none;
+  -webkit-box-shadow: 5px 5px 0 #fff;
+          box-shadow: 5px 5px 0 #fff;
+}
+
 @media only screen and (max-width: 576px) {
   .btn-primary {
     font-size: 16px;

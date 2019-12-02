@@ -162,7 +162,6 @@ img {
   font-size: 50px;
   color: #110f0f;
   text-align: center;
-  font-weight: bold;
 }
 
 @media screen and (max-width: 768px) {
@@ -312,6 +311,23 @@ button {
   -webkit-appearance: none;
 }
 
+.paragraph {
+  font-size: 20px;
+  text-align: justify;
+}
+
+@media screen and (max-width: 1200px) {
+  .paragraph {
+    font-size: 17px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .paragraph {
+    font-size: 16px;
+  }
+}
+
 ::-moz-selection {
   background: #000;
   /* WebKit/Blink Browsers */
@@ -326,6 +342,7 @@ button {
   color: #fff;
   font-size: 20px;
   border: none;
+  min-width: 180px;
   padding: 12px 17px;
   background-color: #333;
   cursor: pointer;

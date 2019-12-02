@@ -99,24 +99,22 @@ ready(() => {
 //     })
 // });
 
-// ready(() => {
-//     const element = document.querySelector('.navbar');
-//     window.addEventListener('scroll', () => {
+ready(() => {
+    const element = document.querySelector('.navbar');
+    window.addEventListener('scroll', () => {
+        if(screen.width < 768 && window.pageYOffset > 0) {
+            element.classList.add('scrolled');
+        }else if (screen.width < 768 &&  window.pageYOffset < 200) {
+            element.classList.remove('scrolled');
+        }
+    });
 
-
-//         if(window.pageYOffset > 0) {
-//             element.classList.add('scrolled');
-//         }else if (window.pageYOffset < 200) {
-//             element.classList.remove('scrolled');
-//         }
-//     });
-
-//     if(window.pageYOffset > 0) {
-//         element.classList.add('scrolled');
-//     }else if (window.pageYOffset == 0) {
-//         element.classList.remove('scrolled');
-//     }
-// });
+    if(screen.width < 768 && window.pageYOffset > 0) {
+        element.classList.add('scrolled');
+    }else if (screen.width < 768 &&  window.pageYOffset < 200) {
+        element.classList.remove('scrolled');
+    }
+});
 
 // ready(() => {
 //     const ShowMoreClassToggler = () => {
@@ -194,6 +192,7 @@ ready(() => {
         fullpg.destroy();
         $('body').addClass('static');
     }
+
 });
 
 const fontAwesomeFreeObserver = new FontFaceObserver('Font Awesome 5 Free');

@@ -3,6 +3,9 @@
 
 header {
     color: #fff;
+
+    padding-top: 10vh;
+
 }
 
 .page-title {
@@ -32,9 +35,29 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 0 10vw;
+    border-bottom: 2px solid transparent;
+
     box-sizing: border-box;
     color: #fff;
     z-index: 111;
+    transition: all .5s ease;
+
+    &.scrolled {
+        background: #fff;
+        border-bottom: 2px solid #000;
+
+        .logo a,
+        .navbar-title {
+            color: #000;
+        }
+
+        .togglebtn .line,
+        .togglebtn .line::before,
+        .togglebtn .line::after {
+            background-color: #000 !important;
+        }
+
+    }
 
     .logo {
         position: relative;
@@ -42,6 +65,7 @@ header {
         a {
             font-size: 44px;
             color: #fff;
+            transition: all 800ms ease;
 
             @include xs-block {
                 font-size: 27px;
@@ -51,6 +75,7 @@ header {
 
     .navbar-title {
         font-size: 30px;
+        transition: all 800ms ease;
     }
 
     .menu-modal {

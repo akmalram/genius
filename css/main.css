@@ -114,6 +114,26 @@ body:not(.static).active-section-4 .background-full .background-full-sections.ad
   opacity: 1;
 }
 
+body:not(.static).active-section-4 #fp-nav ul li a span {
+  background-color: #000;
+}
+
+body:not(.static).active-section-4 .navbar .logo a {
+  color: #000;
+}
+
+body:not(.static).active-section-4 .navbar-title {
+  color: #000;
+}
+
+body:not(.static).active-section-4 .navbar .togglebtn .line {
+  background: #000;
+}
+
+body:not(.static).active-section-4 .navbar .togglebtn .line::before, body:not(.static).active-section-4 .navbar .togglebtn .line::after {
+  background: #000;
+}
+
 #fullpage .section {
   opacity: 0;
   will-change: opacity;
@@ -382,6 +402,84 @@ body.static .aboutus .content {
   }
   .courses .course .value {
     font-size: 20px;
+  }
+}
+
+.preferences .section-content {
+  -webkit-box-pack: start !important;
+      -ms-flex-pack: start !important;
+          justify-content: flex-start !important;
+  padding-top: 10vh !important;
+}
+
+.preferences .row {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.preferences .title-primary {
+  margin-top: 4vh;
+  margin-bottom: 7vh;
+}
+
+.preferences .item {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 15px;
+  margin-right: 15px;
+  width: calc(25% - 30px);
+  max-width: 300px;
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .preferences .item {
+    width: calc(50% - 30px);
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .preferences .item {
+    width: calc(100% - 30px);
+  }
+}
+
+.preferences .item .icon {
+  width: 125px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  margin: 0 auto;
+  margin-bottom: 15px;
+}
+
+.preferences .item .heading {
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.preferences .item .text {
+  font-size: 18px;
+  line-height: 1.5;
+  letter-spacing: 1px;
+}
+
+@media screen and (max-width: 1024px) {
+  .preferences .item .icon {
+    width: 110px;
+  }
+  .preferences .item .heading {
+    font-size: 29px;
+  }
+  .preferences .item .text {
+    font-size: 16px;
+    line-height: 1.3;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .preferences .item {
+    margin-bottom: 30px;
   }
 }
 /*# sourceMappingURL=main.css.map */

@@ -1,3 +1,10 @@
+:root {
+  --primary-color: #f7a024;
+  --violet-color: rgb(57, 52, 116);
+  --yellow-color: #E1C65D;
+  --blue-color: #003A9D;
+}
+
 #fp-nav ul li {
   margin: 40px 0;
 }
@@ -53,57 +60,62 @@ body:not(.static) .background-full-sections {
 }
 
 body:not(.static) .background-full-sections.header {
-  background-image: url(../img/header-bg.jpg);
+  background-image: url(../img/office-violet.jpg);
   -webkit-box-shadow: inset 0 0 1000rem 1000rem rgba(0, 0, 0, 0.4);
           box-shadow: inset 0 0 1000rem 1000rem rgba(0, 0, 0, 0.4);
+}
+
+body:not(.static) #fp-nav ul li a.active span {
+  -webkit-box-shadow: 0 0 15px var(--violet-color);
+          box-shadow: 0 0 15px var(--violet-color);
+}
+
+body:not(.static) #fp-nav ul li a span {
+  background-color: var(--violet-color);
 }
 
 body:not(.static).active-section-1 .background-full .background-full-sections.header {
   opacity: 1;
 }
 
-body:not(.static).active-section-2 #fp-nav ul li a span {
-  background-color: #000;
+body:not(.static).active-section-1 #fp-nav ul li a span {
+  background: #fff;
 }
 
 body:not(.static).active-section-2 .navbar .logo a {
-  color: #000;
+  color: var(--primary-color);
 }
 
 body:not(.static).active-section-2 .navbar-title {
-  color: #000;
+  color: var(--primary-color);
 }
 
 body:not(.static).active-section-2 .navbar .togglebtn .line {
-  background: #000;
+  background: var(--primary-color);
 }
 
 body:not(.static).active-section-2 .navbar .togglebtn .line::before, body:not(.static).active-section-2 .navbar .togglebtn .line::after {
-  background: #000;
+  background: var(--primary-color);
 }
 
 body:not(.static).active-section-2 .background-full .background-full-sections.about {
   opacity: 1;
 }
 
-body:not(.static).active-section-3 #fp-nav ul li a span {
-  background-color: #000;
-}
-
 body:not(.static).active-section-3 .navbar .logo a {
-  color: #000;
+  color: var(--primary-color);
 }
 
 body:not(.static).active-section-3 .navbar-title {
-  color: #000;
+  color: var(--primary-color);
 }
 
 body:not(.static).active-section-3 .navbar .togglebtn .line {
-  background: #000;
+  background: var(--primary-color);
 }
 
 body:not(.static).active-section-3 .navbar .togglebtn .line::before, body:not(.static).active-section-3 .navbar .togglebtn .line::after {
-  background: #000;
+  background: var(--primary-color);
 }
 
 body:not(.static).active-section-3 .background-full .background-full-sections.courses {
@@ -114,48 +126,40 @@ body:not(.static).active-section-4 .background-full .background-full-sections.ad
   opacity: 1;
 }
 
-body:not(.static).active-section-4 #fp-nav ul li a span {
-  background-color: #000;
-}
-
 body:not(.static).active-section-4 .navbar .logo a {
-  color: #000;
+  color: var(--primary-color);
 }
 
 body:not(.static).active-section-4 .navbar-title {
-  color: #000;
+  color: var(--primary-color);
 }
 
 body:not(.static).active-section-4 .navbar .togglebtn .line {
-  background: #000;
+  background: var(--primary-color);
 }
 
 body:not(.static).active-section-4 .navbar .togglebtn .line::before, body:not(.static).active-section-4 .navbar .togglebtn .line::after {
-  background: #000;
+  background: var(--primary-color);
 }
 
 body:not(.static).active-section-5 .background-full .background-full-sections.advantages {
   opacity: 1;
 }
 
-body:not(.static).active-section-5 #fp-nav ul li a span {
-  background-color: #000;
-}
-
 body:not(.static).active-section-5 .navbar .logo a {
-  color: #000;
+  color: var(--primary-color);
 }
 
 body:not(.static).active-section-5 .navbar-title {
-  color: #000;
+  color: var(--primary-color);
 }
 
 body:not(.static).active-section-5 .navbar .togglebtn .line {
-  background: #000;
+  background: var(--primary-color);
 }
 
 body:not(.static).active-section-5 .navbar .togglebtn .line::before, body:not(.static).active-section-5 .navbar .togglebtn .line::after {
-  background: #000;
+  background: var(--primary-color);
 }
 
 #fullpage .section {
@@ -280,6 +284,10 @@ body.static .aboutus .photo {
 
 body.static .aboutus .content {
   margin-bottom: 30px;
+}
+
+.courses .btn-primary {
+  background: var(--primary-color);
 }
 
 .courses .row-inner {
@@ -691,6 +699,21 @@ body.static .aboutus .content {
   .contacts .socials a {
     font-size: 20px;
     margin-right: 10px;
+  }
+}
+
+.contacts .map iframe {
+  width: 90%;
+  display: block;
+  margin: 0 auto;
+  height: 300px;
+  border-radius: 3px;
+  border: 2px solid #f7a024;
+}
+
+@media screen and (max-width: 576px) {
+  .contacts .map iframe {
+    height: 200px;
   }
 }
 /*# sourceMappingURL=main.css.map */

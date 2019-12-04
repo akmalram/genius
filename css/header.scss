@@ -4,6 +4,10 @@
 header {
     color: #fff;
     // padding-top: 10vh;
+
+    .btn-primary {
+        background: var(--violet-color);
+    }
 }
 
 .page-title {

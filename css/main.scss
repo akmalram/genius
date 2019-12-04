@@ -1,6 +1,18 @@
 @import './mixins';
 @import './smart-grid';
 
+$primary-color: #F7A024;
+$violet-color: #231E60;
+$yellow-color: #E1C65D;
+$blue-color: #003A9D;
+
+:root {
+    --primary-color: #f7a024;
+    --violet-color: rgb(57, 52, 116);
+    --yellow-color: #E1C65D;
+    --blue-color: #003A9D;
+}
+
 #fp-nav {
     ul li {
         margin: 40px 0;
@@ -58,42 +70,57 @@ body:not(.static) {
     }
 
     .background-full-sections.header {
-        background-image: url(../img/header-bg.jpg);
+        background-image: url(../img/office-violet.jpg);
         box-shadow: inset 0 0 1000rem 1000rem rgba($color: #000000, $alpha: .4);
     }
+
+    #fp-nav ul {
+        li {
+            a {
+                &.active {
+                    span {
+                        box-shadow: 0 0 15px var(--violet-color);
+                    }
+                }
+                span {
+                    background-color: var(--violet-color);
+                }
+            }
+        }
+    }
+
 
     // Section 1 is active
     &.active-section-1 {
         .background-full .background-full-sections.header {
             opacity: 1;
         }
+        #fp-nav ul li a span {
+            background: #fff;
+        }
     }
 
     // Section 2 is active
     &.active-section-2 {
-        #fp-nav ul li a span {
-            background-color: #000;
-        }
 
         .navbar {
             .logo a {
-                color: #000;
+                color: var(--primary-color);
             }
 
             &-title {
-                color: #000;
+                color: var(--primary-color);
             }
 
             .togglebtn .line {
-                background: #000;
+                background: var(--primary-color);
 
                 &::before,
                 &::after {
-                    background: #000;
+                    background: var(--primary-color);
                 }
             }
         }
-
 
         .background-full .background-full-sections.about {
             opacity: 1;
@@ -102,25 +129,22 @@ body:not(.static) {
 
     // Section 3 is active
     &.active-section-3 {
-        #fp-nav ul li a span {
-            background-color: #000;
-        }
 
         .navbar {
             .logo a {
-                color: #000;
+                color: var(--primary-color);
             }
 
             &-title {
-                color: #000;
+                color: var(--primary-color);
             }
 
             .togglebtn .line {
-                background: #000;
+                background: var(--primary-color);
 
                 &::before,
                 &::after {
-                    background: #000;
+                    background: var(--primary-color);
                 }
             }
         }
@@ -136,25 +160,21 @@ body:not(.static) {
             opacity: 1;
         }
 
-        #fp-nav ul li a span {
-            background-color: #000;
-        }
-
         .navbar {
             .logo a {
-                color: #000;
+                color: var(--primary-color);
             }
 
             &-title {
-                color: #000;
+                color: var(--primary-color);
             }
 
             .togglebtn .line {
-                background: #000;
+                background: var(--primary-color);
 
                 &::before,
                 &::after {
-                    background: #000;
+                    background: var(--primary-color);
                 }
             }
         }
@@ -166,25 +186,21 @@ body:not(.static) {
             opacity: 1;
         }
 
-        #fp-nav ul li a span {
-            background-color: #000;
-        }
-
         .navbar {
             .logo a {
-                color: #000;
+                color: var(--primary-color);
             }
 
             &-title {
-                color: #000;
+                color: var(--primary-color);
             }
 
             .togglebtn .line {
-                background: #000;
+                background: var(--primary-color);
 
                 &::before,
                 &::after {
-                    background: #000;
+                    background: var(--primary-color);
                 }
             }
         }
@@ -299,6 +315,11 @@ body.static .aboutus {
 }
 
 .courses {
+
+    .btn-primary {
+        background: var(--primary-color);
+    }
+
     .row-inner {
         width: 100%;
         justify-content: space-evenly;
@@ -682,6 +703,21 @@ body.static .aboutus {
             @include sm-block {
                 font-size: 20px;
                 margin-right: 10px;
+            }
+        }
+    }
+
+    .map {
+        iframe {
+            width: 90%;
+            display: block;
+            margin: 0 auto;
+            height: 300px;
+            border-radius: 3px;
+            border: 2px solid #f7a024;
+
+            @include xs-block {
+                height: 200px;
             }
         }
     }

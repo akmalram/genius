@@ -231,27 +231,19 @@ button {
     cursor: pointer;
     box-sizing: border-box;
     display: inline-block;
-    border: 2px solid #333;
     border-radius: 3px;
-    box-shadow: 10px 10px 0 #111;
     perspective: 100px;
-    transition: all 400ms ease;
-
     &:hover {
         outline: none;
-        box-shadow: 5px 5px 0 #111;
     }
 
     &.white {
         background: #fff;
         color: #000;
         border-color: #fff;
-        box-shadow: 10px 10px 0 rgb(223, 223, 223);
-
 
         &:hover {
             outline: none;
-            box-shadow: 5px 5px 0 #fff;
         }
     }
 

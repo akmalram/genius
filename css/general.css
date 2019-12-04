@@ -349,34 +349,23 @@ button {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   display: inline-block;
-  border: 2px solid #333;
   border-radius: 3px;
-  -webkit-box-shadow: 10px 10px 0 #111;
-          box-shadow: 10px 10px 0 #111;
   -webkit-perspective: 100px;
           perspective: 100px;
-  -webkit-transition: all 400ms ease;
-  transition: all 400ms ease;
 }
 
 .btn-primary:hover {
   outline: none;
-  -webkit-box-shadow: 5px 5px 0 #111;
-          box-shadow: 5px 5px 0 #111;
 }
 
 .btn-primary.white {
   background: #fff;
   color: #000;
   border-color: #fff;
-  -webkit-box-shadow: 10px 10px 0 #dfdfdf;
-          box-shadow: 10px 10px 0 #dfdfdf;
 }
 
 .btn-primary.white:hover {
   outline: none;
-  -webkit-box-shadow: 5px 5px 0 #fff;
-          box-shadow: 5px 5px 0 #fff;
 }
 
 @media only screen and (max-width: 576px) {

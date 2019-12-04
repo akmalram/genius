@@ -21,6 +21,7 @@
     <script src="./js/fullpage.js"></script>
     <script src="./js/easings.min.js"></script>
     <script src="./js/script.js"></script>
+    <script src="./js/form-validation.js"></script>
 </head>
 
 <body>
@@ -94,6 +95,13 @@
                                     <p class="value">4 месяца</p>
                                 </div>
                             </div>
+                            <div class="with-icon duration">
+                                <img class="icon" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgNjAgNjAiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDYwIDYwOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgd2lkdGg9IjUxMiIgaGVpZ2h0PSI1MTIiPjxnPjxnPgoJPHBhdGggZD0iTTMwLDBDMTMuNDU4LDAsMCwxMy40NTgsMCwzMHMxMy40NTgsMzAsMzAsMzBzMzAtMTMuNDU4LDMwLTMwUzQ2LjU0MiwwLDMwLDB6IE0zMCw1OEMxNC41NjEsNTgsMiw0NS40MzksMiwzMCAgIFMxNC41NjEsMiwzMCwyczI4LDEyLjU2MSwyOCwyOFM0NS40MzksNTgsMzAsNTh6IiBkYXRhLW9yaWdpbmFsPSIjMDAwMDAwIiBjbGFzcz0iYWN0aXZlLXBhdGgiIHN0eWxlPSJmaWxsOiNGRkZGRkYiIGRhdGEtb2xkX2NvbG9yPSIjMDAwMDAwIj48L3BhdGg+Cgk8cGF0aCBkPSJNMzEsMjYuMDIxVjE1Ljg3OWMwLTAuNTUzLTAuNDQ4LTEtMS0xcy0xLDAuNDQ3LTEsMXYxMC4xNDJjLTEuMzk5LDAuMzY0LTIuNDk0LDEuNDU5LTIuODU4LDIuODU4SDE5Yy0wLjU1MiwwLTEsMC40NDctMSwxICAgczAuNDQ4LDEsMSwxaDcuMTQyYzAuNDQ3LDEuNzIsMiwzLDMuODU4LDNjMi4yMDYsMCw0LTEuNzk0LDQtNEMzNCwyOC4wMiwzMi43MiwyNi40NjgsMzEsMjYuMDIxeiBNMzAsMzEuODc5Yy0xLjEwMywwLTItMC44OTctMi0yICAgczAuODk3LTIsMi0yczIsMC44OTcsMiwyUzMxLjEwMywzMS44NzksMzAsMzEuODc5eiIgZGF0YS1vcmlnaW5hbD0iIzAwMDAwMCIgY2xhc3M9ImFjdGl2ZS1wYXRoIiBzdHlsZT0iZmlsbDojRkZGRkZGIiBkYXRhLW9sZF9jb2xvcj0iIzAwMDAwMCI+PC9wYXRoPgoJPHBhdGggZD0iTTMwLDkuODc5YzAuNTUyLDAsMS0wLjQ0NywxLTF2LTFjMC0wLjU1My0wLjQ0OC0xLTEtMXMtMSwwLjQ0Ny0xLDF2MUMyOSw5LjQzMiwyOS40NDgsOS44NzksMzAsOS44Nzl6IiBkYXRhLW9yaWdpbmFsPSIjMDAwMDAwIiBjbGFzcz0iYWN0aXZlLXBhdGgiIHN0eWxlPSJmaWxsOiNGRkZGRkYiIGRhdGEtb2xkX2NvbG9yPSIjMDAwMDAwIj48L3BhdGg+Cgk8cGF0aCBkPSJNMzAsNDkuODc5Yy0wLjU1MiwwLTEsMC40NDctMSwxdjFjMCwwLjU1MywwLjQ0OCwxLDEsMXMxLTAuNDQ3LDEtMXYtMUMzMSw1MC4zMjYsMzAuNTUyLDQ5Ljg3OSwzMCw0OS44Nzl6IiBkYXRhLW9yaWdpbmFsPSIjMDAwMDAwIiBjbGFzcz0iYWN0aXZlLXBhdGgiIHN0eWxlPSJmaWxsOiNGRkZGRkYiIGRhdGEtb2xkX2NvbG9yPSIjMDAwMDAwIj48L3BhdGg+Cgk8cGF0aCBkPSJNNTIsMjguODc5aC0xYy0wLjU1MiwwLTEsMC40NDctMSwxczAuNDQ4LDEsMSwxaDFjMC41NTIsMCwxLTAuNDQ3LDEtMVM1Mi41NTIsMjguODc5LDUyLDI4Ljg3OXoiIGRhdGEtb3JpZ2luYWw9IiMwMDAwMDAiIGNsYXNzPSJhY3RpdmUtcGF0aCIgc3R5bGU9ImZpbGw6I0ZGRkZGRiIgZGF0YS1vbGRfY29sb3I9IiMwMDAwMDAiPjwvcGF0aD4KCTxwYXRoIGQ9Ik05LDI4Ljg3OUg4Yy0wLjU1MiwwLTEsMC40NDctMSwxczAuNDQ4LDEsMSwxaDFjMC41NTIsMCwxLTAuNDQ3LDEtMVM5LjU1MiwyOC44NzksOSwyOC44Nzl6IiBkYXRhLW9yaWdpbmFsPSIjMDAwMDAwIiBjbGFzcz0iYWN0aXZlLXBhdGgiIHN0eWxlPSJmaWxsOiNGRkZGRkYiIGRhdGEtb2xkX2NvbG9yPSIjMDAwMDAwIj48L3BhdGg+Cgk8cGF0aCBkPSJNNDQuODQ5LDEzLjYxNWwtMC43MDcsMC43MDdjLTAuMzkxLDAuMzkxLTAuMzkxLDEuMDIzLDAsMS40MTRjMC4xOTUsMC4xOTUsMC40NTEsMC4yOTMsMC43MDcsMC4yOTMgICBzMC41MTItMC4wOTgsMC43MDctMC4yOTNsMC43MDctMC43MDdjMC4zOTEtMC4zOTEsMC4zOTEtMS4wMjMsMC0xLjQxNFM0NS4yNCwxMy4yMjUsNDQuODQ5LDEzLjYxNXoiIGRhdGEtb3JpZ2luYWw9IiMwMDAwMDAiIGNsYXNzPSJhY3RpdmUtcGF0aCIgc3R5bGU9ImZpbGw6I0ZGRkZGRiIgZGF0YS1vbGRfY29sb3I9IiMwMDAwMDAiPjwvcGF0aD4KCTxwYXRoIGQ9Ik0xNC40NDQsNDQuMDIxbC0wLjcwNywwLjcwN2MtMC4zOTEsMC4zOTEtMC4zOTEsMS4wMjMsMCwxLjQxNGMwLjE5NSwwLjE5NSwwLjQ1MSwwLjI5MywwLjcwNywwLjI5MyAgIHMwLjUxMi0wLjA5OCwwLjcwNy0wLjI5M2wwLjcwNy0wLjcwN2MwLjM5MS0wLjM5MSwwLjM5MS0xLjAyMywwLTEuNDE0UzE0LjgzNCw0My42MzEsMTQuNDQ0LDQ0LjAyMXoiIGRhdGEtb3JpZ2luYWw9IiMwMDAwMDAiIGNsYXNzPSJhY3RpdmUtcGF0aCIgc3R5bGU9ImZpbGw6I0ZGRkZGRiIgZGF0YS1vbGRfY29sb3I9IiMwMDAwMDAiPjwvcGF0aD4KCTxwYXRoIGQ9Ik00NS41NTYsNDQuMDIxYy0wLjM5MS0wLjM5MS0xLjAyMy0wLjM5MS0xLjQxNCwwcy0wLjM5MSwxLjAyMywwLDEuNDE0bDAuNzA3LDAuNzA3YzAuMTk1LDAuMTk1LDAuNDUxLDAuMjkzLDAuNzA3LDAuMjkzICAgczAuNTEyLTAuMDk4LDAuNzA3LTAuMjkzYzAuMzkxLTAuMzkxLDAuMzkxLTEuMDIzLDAtMS40MTRMNDUuNTU2LDQ0LjAyMXoiIGRhdGEtb3JpZ2luYWw9IiMwMDAwMDAiIGNsYXNzPSJhY3RpdmUtcGF0aCIgc3R5bGU9ImZpbGw6I0ZGRkZGRiIgZGF0YS1vbGRfY29sb3I9IiMwMDAwMDAiPjwvcGF0aD4KCTxwYXRoIGQ9Ik0xNS4xNTEsMTMuNjE1Yy0wLjM5MS0wLjM5MS0xLjAyMy0wLjM5MS0xLjQxNCwwcy0wLjM5MSwxLjAyMywwLDEuNDE0bDAuNzA3LDAuNzA3YzAuMTk1LDAuMTk1LDAuNDUxLDAuMjkzLDAuNzA3LDAuMjkzICAgczAuNTEyLTAuMDk4LDAuNzA3LTAuMjkzYzAuMzkxLTAuMzkxLDAuMzkxLTEuMDIzLDAtMS40MTRMMTUuMTUxLDEzLjYxNXoiIGRhdGEtb3JpZ2luYWw9IiMwMDAwMDAiIGNsYXNzPSJhY3RpdmUtcGF0aCIgc3R5bGU9ImZpbGw6I0ZGRkZGRiIgZGF0YS1vbGRfY29sb3I9IiMwMDAwMDAiPjwvcGF0aD4KPC9nPjwvZz4gPC9zdmc+" />
+                                <div class="content">
+                                    <p>Продолжительность занятий</p>
+                                    <p class="value">3 раза в неделю по 2 часа</p>
+                                </div>
+                            </div>
                             <div class="with-icon price">
                                 <img class="icon" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgNTEyIDUxMiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNTEyIDUxMjsiIHhtbDpzcGFjZT0icHJlc2VydmUiIHdpZHRoPSI1MTIiIGhlaWdodD0iNTEyIiBjbGFzcz0iIj48Zz48Zz4KCTxnPgoJCTxwYXRoIGQ9Ik00MzcuMDIsNzQuOThDMzg4LjY2OCwyNi42MjgsMzI0LjM4LDAsMjU2LDBTMTIzLjMzMiwyNi42MjgsNzQuOTgsNzQuOThDMjYuNjI5LDEyMy4zMzIsMCwxODcuNjIsMCwyNTYgICAgczI2LjYyOSwxMzIuNjY4LDc0Ljk4LDE4MS4wMkMxMjMuMzMyLDQ4NS4zNzIsMTg3LjYyLDUxMiwyNTYsNTEyczEzMi42NjgtMjYuNjI4LDE4MS4wMi03NC45OCAgICBDNDg1LjM3MSwzODguNjY4LDUxMiwzMjQuMzgsNTEyLDI1NlM0ODUuMzcxLDEyMy4zMzIsNDM3LjAyLDc0Ljk4eiBNMjU2LDQ4MkMxMzEuMzgzLDQ4MiwzMCwzODAuNjE3LDMwLDI1NlMxMzEuMzgzLDMwLDI1NiwzMCAgICBzMjI2LDEwMS4zODMsMjI2LDIyNlMzODAuNjE3LDQ4MiwyNTYsNDgyeiIgZGF0YS1vcmlnaW5hbD0iIzAwMDAwMCIgY2xhc3M9ImFjdGl2ZS1wYXRoIiBzdHlsZT0iZmlsbDojRkZGRkZGIiBkYXRhLW9sZF9jb2xvcj0iIzAwMDAwMCI+PC9wYXRoPgoJPC9nPgo8L2c+PGc+Cgk8Zz4KCQk8cGF0aCBkPSJNMjcyLjA2NywyNDFoLTMyLjEzNGMtMTguMzA3LDAtMzMuMi0xNC44OTMtMzMuMi0zMy4xOTljMC0xOC4zMDcsMTQuODk0LTMzLjIsMzMuMi0zMy4ySDMwNC4yYzguMjg0LDAsMTUtNi43MTYsMTUtMTUgICAgcy02LjcxNi0xNS0xNS0xNUgyNzF2LTMzLjJjMC04LjI4NC02LjcxNi0xNS0xNS0xNXMtMTUsNi43MTYtMTUsMTV2MzMuMmgtMS4wNjZjLTM0Ljg0OSwwLTYzLjIsMjguMzUyLTYzLjIsNjMuMiAgICBjMCwzNC44NDgsMjguMzUyLDYzLjE5OSw2My4yLDYzLjE5OWgzMi4xMzRjMTguMzA2LDAsMzMuMTk5LDE0Ljg5NCwzMy4xOTksMzMuMmMwLDE4LjMwNi0xNC44OTMsMzMuMi0zMy4xOTksMzMuMmgtNjQuMjY3ICAgIGMtOC4yODQsMC0xNSw2LjcxNi0xNSwxNXM2LjcxNiwxNSwxNSwxNUgyNDF2MzMuMjAxYzAsOC4yODQsNi43MTYsMTUsMTUsMTVzMTUtNi43MTYsMTUtMTVWMzY3LjRoMS4wNjcgICAgYzM0Ljg0OCwwLDYzLjE5OS0yOC4zNTIsNjMuMTk5LTYzLjJTMzA2LjkxNSwyNDEsMjcyLjA2NywyNDF6IiBkYXRhLW9yaWdpbmFsPSIjMDAwMDAwIiBjbGFzcz0iYWN0aXZlLXBhdGgiIHN0eWxlPSJmaWxsOiNGRkZGRkYiIGRhdGEtb2xkX2NvbG9yPSIjMDAwMDAwIj48L3BhdGg+Cgk8L2c+CjwvZz48L2c+IDwvc3ZnPg==" />
                                 <div class="content">
@@ -113,6 +121,13 @@
                                 <div class="with-icon-content">
                                     <p>Продолжительность курса</p>
                                     <p class="value">4 месяца</p>
+                                </div>
+                            </div>
+                            <div class="with-icon duration">
+                                <img class="icon" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgNjAgNjAiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDYwIDYwOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgd2lkdGg9IjUxMiIgaGVpZ2h0PSI1MTIiPjxnPjxnPgoJPHBhdGggZD0iTTMwLDBDMTMuNDU4LDAsMCwxMy40NTgsMCwzMHMxMy40NTgsMzAsMzAsMzBzMzAtMTMuNDU4LDMwLTMwUzQ2LjU0MiwwLDMwLDB6IE0zMCw1OEMxNC41NjEsNTgsMiw0NS40MzksMiwzMCAgIFMxNC41NjEsMiwzMCwyczI4LDEyLjU2MSwyOCwyOFM0NS40MzksNTgsMzAsNTh6IiBkYXRhLW9yaWdpbmFsPSIjMDAwMDAwIiBjbGFzcz0iYWN0aXZlLXBhdGgiIHN0eWxlPSJmaWxsOiNGRkZGRkYiIGRhdGEtb2xkX2NvbG9yPSIjMDAwMDAwIj48L3BhdGg+Cgk8cGF0aCBkPSJNMzEsMjYuMDIxVjE1Ljg3OWMwLTAuNTUzLTAuNDQ4LTEtMS0xcy0xLDAuNDQ3LTEsMXYxMC4xNDJjLTEuMzk5LDAuMzY0LTIuNDk0LDEuNDU5LTIuODU4LDIuODU4SDE5Yy0wLjU1MiwwLTEsMC40NDctMSwxICAgczAuNDQ4LDEsMSwxaDcuMTQyYzAuNDQ3LDEuNzIsMiwzLDMuODU4LDNjMi4yMDYsMCw0LTEuNzk0LDQtNEMzNCwyOC4wMiwzMi43MiwyNi40NjgsMzEsMjYuMDIxeiBNMzAsMzEuODc5Yy0xLjEwMywwLTItMC44OTctMi0yICAgczAuODk3LTIsMi0yczIsMC44OTcsMiwyUzMxLjEwMywzMS44NzksMzAsMzEuODc5eiIgZGF0YS1vcmlnaW5hbD0iIzAwMDAwMCIgY2xhc3M9ImFjdGl2ZS1wYXRoIiBzdHlsZT0iZmlsbDojRkZGRkZGIiBkYXRhLW9sZF9jb2xvcj0iIzAwMDAwMCI+PC9wYXRoPgoJPHBhdGggZD0iTTMwLDkuODc5YzAuNTUyLDAsMS0wLjQ0NywxLTF2LTFjMC0wLjU1My0wLjQ0OC0xLTEtMXMtMSwwLjQ0Ny0xLDF2MUMyOSw5LjQzMiwyOS40NDgsOS44NzksMzAsOS44Nzl6IiBkYXRhLW9yaWdpbmFsPSIjMDAwMDAwIiBjbGFzcz0iYWN0aXZlLXBhdGgiIHN0eWxlPSJmaWxsOiNGRkZGRkYiIGRhdGEtb2xkX2NvbG9yPSIjMDAwMDAwIj48L3BhdGg+Cgk8cGF0aCBkPSJNMzAsNDkuODc5Yy0wLjU1MiwwLTEsMC40NDctMSwxdjFjMCwwLjU1MywwLjQ0OCwxLDEsMXMxLTAuNDQ3LDEtMXYtMUMzMSw1MC4zMjYsMzAuNTUyLDQ5Ljg3OSwzMCw0OS44Nzl6IiBkYXRhLW9yaWdpbmFsPSIjMDAwMDAwIiBjbGFzcz0iYWN0aXZlLXBhdGgiIHN0eWxlPSJmaWxsOiNGRkZGRkYiIGRhdGEtb2xkX2NvbG9yPSIjMDAwMDAwIj48L3BhdGg+Cgk8cGF0aCBkPSJNNTIsMjguODc5aC0xYy0wLjU1MiwwLTEsMC40NDctMSwxczAuNDQ4LDEsMSwxaDFjMC41NTIsMCwxLTAuNDQ3LDEtMVM1Mi41NTIsMjguODc5LDUyLDI4Ljg3OXoiIGRhdGEtb3JpZ2luYWw9IiMwMDAwMDAiIGNsYXNzPSJhY3RpdmUtcGF0aCIgc3R5bGU9ImZpbGw6I0ZGRkZGRiIgZGF0YS1vbGRfY29sb3I9IiMwMDAwMDAiPjwvcGF0aD4KCTxwYXRoIGQ9Ik05LDI4Ljg3OUg4Yy0wLjU1MiwwLTEsMC40NDctMSwxczAuNDQ4LDEsMSwxaDFjMC41NTIsMCwxLTAuNDQ3LDEtMVM5LjU1MiwyOC44NzksOSwyOC44Nzl6IiBkYXRhLW9yaWdpbmFsPSIjMDAwMDAwIiBjbGFzcz0iYWN0aXZlLXBhdGgiIHN0eWxlPSJmaWxsOiNGRkZGRkYiIGRhdGEtb2xkX2NvbG9yPSIjMDAwMDAwIj48L3BhdGg+Cgk8cGF0aCBkPSJNNDQuODQ5LDEzLjYxNWwtMC43MDcsMC43MDdjLTAuMzkxLDAuMzkxLTAuMzkxLDEuMDIzLDAsMS40MTRjMC4xOTUsMC4xOTUsMC40NTEsMC4yOTMsMC43MDcsMC4yOTMgICBzMC41MTItMC4wOTgsMC43MDctMC4yOTNsMC43MDctMC43MDdjMC4zOTEtMC4zOTEsMC4zOTEtMS4wMjMsMC0xLjQxNFM0NS4yNCwxMy4yMjUsNDQuODQ5LDEzLjYxNXoiIGRhdGEtb3JpZ2luYWw9IiMwMDAwMDAiIGNsYXNzPSJhY3RpdmUtcGF0aCIgc3R5bGU9ImZpbGw6I0ZGRkZGRiIgZGF0YS1vbGRfY29sb3I9IiMwMDAwMDAiPjwvcGF0aD4KCTxwYXRoIGQ9Ik0xNC40NDQsNDQuMDIxbC0wLjcwNywwLjcwN2MtMC4zOTEsMC4zOTEtMC4zOTEsMS4wMjMsMCwxLjQxNGMwLjE5NSwwLjE5NSwwLjQ1MSwwLjI5MywwLjcwNywwLjI5MyAgIHMwLjUxMi0wLjA5OCwwLjcwNy0wLjI5M2wwLjcwNy0wLjcwN2MwLjM5MS0wLjM5MSwwLjM5MS0xLjAyMywwLTEuNDE0UzE0LjgzNCw0My42MzEsMTQuNDQ0LDQ0LjAyMXoiIGRhdGEtb3JpZ2luYWw9IiMwMDAwMDAiIGNsYXNzPSJhY3RpdmUtcGF0aCIgc3R5bGU9ImZpbGw6I0ZGRkZGRiIgZGF0YS1vbGRfY29sb3I9IiMwMDAwMDAiPjwvcGF0aD4KCTxwYXRoIGQ9Ik00NS41NTYsNDQuMDIxYy0wLjM5MS0wLjM5MS0xLjAyMy0wLjM5MS0xLjQxNCwwcy0wLjM5MSwxLjAyMywwLDEuNDE0bDAuNzA3LDAuNzA3YzAuMTk1LDAuMTk1LDAuNDUxLDAuMjkzLDAuNzA3LDAuMjkzICAgczAuNTEyLTAuMDk4LDAuNzA3LTAuMjkzYzAuMzkxLTAuMzkxLDAuMzkxLTEuMDIzLDAtMS40MTRMNDUuNTU2LDQ0LjAyMXoiIGRhdGEtb3JpZ2luYWw9IiMwMDAwMDAiIGNsYXNzPSJhY3RpdmUtcGF0aCIgc3R5bGU9ImZpbGw6I0ZGRkZGRiIgZGF0YS1vbGRfY29sb3I9IiMwMDAwMDAiPjwvcGF0aD4KCTxwYXRoIGQ9Ik0xNS4xNTEsMTMuNjE1Yy0wLjM5MS0wLjM5MS0xLjAyMy0wLjM5MS0xLjQxNCwwcy0wLjM5MSwxLjAyMywwLDEuNDE0bDAuNzA3LDAuNzA3YzAuMTk1LDAuMTk1LDAuNDUxLDAuMjkzLDAuNzA3LDAuMjkzICAgczAuNTEyLTAuMDk4LDAuNzA3LTAuMjkzYzAuMzkxLTAuMzkxLDAuMzkxLTEuMDIzLDAtMS40MTRMMTUuMTUxLDEzLjYxNXoiIGRhdGEtb3JpZ2luYWw9IiMwMDAwMDAiIGNsYXNzPSJhY3RpdmUtcGF0aCIgc3R5bGU9ImZpbGw6I0ZGRkZGRiIgZGF0YS1vbGRfY29sb3I9IiMwMDAwMDAiPjwvcGF0aD4KPC9nPjwvZz4gPC9zdmc+" />
+                                <div class="content">
+                                    <p>Продолжительность занятий</p>
+                                    <p class="value">3 раза в неделю по 2 часа</p>
                                 </div>
                             </div>
                             <div class="with-icon price">
@@ -162,6 +177,48 @@
                             <p class="text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam, aspernatur eveniet repudiandae nemo excepturi blanditiis.</p>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+        <div class="section section-5 contact-form">
+            <div class="section-content">
+                <div class="container">
+                    <h2 class="title-primary">Контактная форма</h2>
+                    <form  class="flex-between form">
+                        <label class="label-name">
+                            <input type="text" name="name" placeholder="Ваше имя" class="form-input input-name" required />
+                            <p class="errorField">
+                                <span class="empty">Пожалуйста заполните поле</span>
+                                <span class="numbers">Поле не должно содержать номера</span>
+                                <span class="length">Не менее чем 2 буквы</span>
+                            </p>
+                        </label>
+                        <label class="label-phone">
+                            <input type="tel" name="phone" placeholder="Ваш номер" class="form-input input-phone"  required />
+                            <p class="errorField">
+                                <span class="empty">Пожалуйста заполните поле</span>
+                                <span class="letters">Поле не должно содержать букв</span>
+                                <span class="length">Не менее чем 9 символов</span>
+                            </p>
+                        </label>
+                        <label class="label-email">
+                            <input type="email" name="email" placeholder="Ваш email" class="form-input input-email"  required />
+                            <p class="errorField">
+                                <span class="empty">Пожалуйста заполните поле</span>
+                                <span class="length">Не менее чем 7 символов</span>
+                                <span class="validEmail">Введите валидный email адресс!</span>
+                            </p>
+                        </label>
+                        <label class="label-textarea">
+                            <textarea name="message" placeholder="Ваше сообщение" class="form-input input-textarea" required></textarea>
+                            <p class="errorField">
+                                <span class="empty">Пожалуйста заполните поле</span>
+                            </p>
+                        </label>
+                        <div class="text-center">
+                            <button type="submit" disabled class="input-submit btn-primary">Отправить</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>

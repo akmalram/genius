@@ -134,6 +134,30 @@ body:not(.static).active-section-4 .navbar .togglebtn .line::before, body:not(.s
   background: #000;
 }
 
+body:not(.static).active-section-5 .background-full .background-full-sections.advantages {
+  opacity: 1;
+}
+
+body:not(.static).active-section-5 #fp-nav ul li a span {
+  background-color: #000;
+}
+
+body:not(.static).active-section-5 .navbar .logo a {
+  color: #000;
+}
+
+body:not(.static).active-section-5 .navbar-title {
+  color: #000;
+}
+
+body:not(.static).active-section-5 .navbar .togglebtn .line {
+  background: #000;
+}
+
+body:not(.static).active-section-5 .navbar .togglebtn .line::before, body:not(.static).active-section-5 .navbar .togglebtn .line::after {
+  background: #000;
+}
+
 #fullpage .section {
   opacity: 0;
   will-change: opacity;
@@ -419,7 +443,7 @@ body.static .aboutus .content {
 
 .preferences .title-primary {
   margin-top: 4vh;
-  margin-bottom: 7vh;
+  margin-bottom: 10vh;
 }
 
 .preferences .item {
@@ -481,5 +505,108 @@ body.static .aboutus .content {
   .preferences .item {
     margin-bottom: 30px;
   }
+}
+
+.contact-form .title-primary {
+  margin-bottom: 50px;
+}
+
+.contact-form .form {
+  max-width: 95%;
+  width: 600px;
+  margin: 0 auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.contact-form .form-input {
+  padding: 12px 13px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 21px;
+  color: #000;
+  border: 2px solid #A9A9A9;
+  width: 100%;
+}
+
+.contact-form .form-input:focus {
+  outline: none;
+  border-color: #000;
+}
+
+@media screen and (max-width: 576px) {
+  .contact-form .form {
+    padding: 0;
+    width: 95%;
+  }
+}
+
+.contact-form .form label {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+@media screen and (max-width: 576px) {
+  .contact-form .form label {
+    margin-bottom: 33px;
+  }
+}
+
+.contact-form .form .errorField {
+  position: absolute;
+  top: 100%;
+  left: 0;
+}
+
+.contact-form .form .errorField span {
+  display: none;
+}
+
+.contact-form .form .errorField.empty .empty {
+  display: block;
+}
+
+.contact-form .form .errorField.numbers .numbers {
+  display: block;
+}
+
+.contact-form .form .errorField.length .length {
+  display: block;
+}
+
+.contact-form .form .errorField.letters .letters {
+  display: block;
+}
+
+.contact-form .form .errorField.validEmail .validEmail {
+  display: block;
+}
+
+.contact-form .form .text-center {
+  width: 100%;
+}
+
+.contact-form .form .label-name,
+.contact-form .form .label-phone {
+  width: 45%;
+}
+
+@media screen and (max-width: 576px) {
+  .contact-form .form .label-name,
+  .contact-form .form .label-phone {
+    width: 100%;
+  }
+}
+
+.contact-form .form .label-email {
+  width: 100%;
+}
+
+.contact-form .form .label-textarea {
+  width: 100%;
+}
+
+.contact-form .form .input-textarea {
+  height: 100px;
 }
 /*# sourceMappingURL=main.css.map */

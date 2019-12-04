@@ -237,7 +237,7 @@ button {
     perspective: 100px;
     transition: all 400ms ease;
 
-    &:hover, &:focus {
+    &:hover {
         outline: none;
         box-shadow: 5px 5px 0 #111;
     }
@@ -249,7 +249,7 @@ button {
         box-shadow: 10px 10px 0 rgb(223, 223, 223);
 
 
-        &:hover, &:focus {
+        &:hover {
             outline: none;
             box-shadow: 5px 5px 0 #fff;
         }

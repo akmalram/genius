@@ -180,45 +180,82 @@
                 </div>
             </div>
         </div>
-        <div class="section section-5 contact-form">
+        <div class="section section-5 contacts">
             <div class="section-content">
-                <div class="container">
-                    <h2 class="title-primary">Контактная форма</h2>
-                    <form  class="flex-between form">
-                        <label class="label-name">
-                            <input type="text" name="name" placeholder="Ваше имя" class="form-input input-name" required />
-                            <p class="errorField">
-                                <span class="empty">Пожалуйста заполните поле</span>
-                                <span class="numbers">Поле не должно содержать номера</span>
-                                <span class="length">Не менее чем 2 буквы</span>
-                            </p>
-                        </label>
-                        <label class="label-phone">
-                            <input type="tel" name="phone" placeholder="Ваш номер" class="form-input input-phone"  required />
-                            <p class="errorField">
-                                <span class="empty">Пожалуйста заполните поле</span>
-                                <span class="letters">Поле не должно содержать букв</span>
-                                <span class="length">Не менее чем 9 символов</span>
-                            </p>
-                        </label>
-                        <label class="label-email">
-                            <input type="email" name="email" placeholder="Ваш email" class="form-input input-email"  required />
-                            <p class="errorField">
-                                <span class="empty">Пожалуйста заполните поле</span>
-                                <span class="length">Не менее чем 7 символов</span>
-                                <span class="validEmail">Введите валидный email адресс!</span>
-                            </p>
-                        </label>
-                        <label class="label-textarea">
-                            <textarea name="message" placeholder="Ваше сообщение" class="form-input input-textarea" required></textarea>
-                            <p class="errorField">
-                                <span class="empty">Пожалуйста заполните поле</span>
-                            </p>
-                        </label>
-                        <div class="text-center">
-                            <button type="submit" disabled class="input-submit btn-primary">Отправить</button>
+                <h2 class="title-primary">Контакты</h2>
+                <div class="row-inner">
+                    <div class="contact-form">
+                        <h2 class="title-secondary">Оставьте заявку</h2>
+                        <form class="flex-between form">
+                            <label class="label-name">
+                                <input type="text" name="name" placeholder="Ваше имя" class="form-input input-name" required />
+                                <p class="errorField">
+                                    <span class="empty">Пожалуйста заполните поле</span>
+                                    <span class="numbers">Поле не должно содержать номера</span>
+                                    <span class="length">Не менее чем 2 буквы</span>
+                                </p>
+                            </label>
+                            <label class="label-phone">
+                                <input type="tel" name="phone" placeholder="Ваш номер" class="form-input input-phone"
+                                    required />
+                                <p class="errorField">
+                                    <span class="empty">Пожалуйста заполните поле</span>
+                                    <span class="letters">Поле не должно содержать букв</span>
+                                    <span class="length">Не менее чем 9 символов</span>
+                                </p>
+                            </label>
+                            <label class="label-email">
+                                <input type="email" name="email" placeholder="Ваш email" class="form-input input-email"
+                                    required />
+                                <p class="errorField">
+                                    <span class="empty">Пожалуйста заполните поле</span>
+                                    <span class="length">Не менее чем 7 символов</span>
+                                    <span class="validEmail">Введите валидный email адресс!</span>
+                                </p>
+                            </label>
+                            <label class="label-textarea">
+                                <textarea name="message" placeholder="Ваше сообщение" class="form-input input-textarea"
+                                    required></textarea>
+                                <p class="errorField">
+                                    <span class="empty">Пожалуйста заполните поле</span>
+                                </p>
+                            </label>
+                            <div class="text-center">
+                                <button type="submit" disabled class="input-submit btn-primary">Отправить</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="contact-info">
+                        <div class="row-inner">
+                            <div class="info-line">
+                                <h4 class="heading">Email</h4>
+                                <p class="value">info@example.com</p>
+                            </div>
+
+                            <div class="info-line">
+                                <h4 class="heading">Телефон</h4>
+                                <p class="value">+998(91) 123-45-67</p>
+                            </div>
+
+                            <div class="info-line">
+                                <h4 class="heading">Адрес</h4>
+                                <p class="value">г.Ташкент ул.Бродуэй 23a</p>
+                            </div>
+
+                            <div class="info-line">
+                                <h4 class="heading">Соц. сети</h4>
+                                <div class="value">
+                                    <div class="socials">
+                                        <a href="#"><i class="fab fa-telegram"></i></a>
+                                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                                        <a href="#"><i class="fab fa-instagram"></i></a>
+                                        <a href="#"><i class="fab fa-behance"></i></a>
+                                        <a href="#"><i class="fab fa-facebook"></i></a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </form>
+                    </div>
                 </div>
             </div>
         </div>

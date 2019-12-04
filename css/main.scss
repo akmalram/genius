@@ -228,7 +228,6 @@ body.static #fullpage .section {
     opacity: 1;
 }
 
-
 .aboutus {
 
     .content,
@@ -507,9 +506,43 @@ body.static .aboutus {
     }
 }
 
-.contact-form {
+.contacts {
+
+    .section-content {
+        justify-content: flex-start !important;
+        padding-top: 10vh !important;
+    }
+
     .title-primary {
         margin-bottom: 50px;
+        width: 100%;
+    }
+
+    .row-inner {
+        width: 100%;
+        justify-content: space-around;
+    }
+
+    .contact-form,
+    .contact-info {
+        width: 45%;
+        box-sizing: border-box;
+
+        @include sm-block {
+            width: 100%;
+            padding-bottom: 50px;
+        }
+    }
+
+    .contact-info {
+        .info-line {
+            width: 50%;
+            box-sizing: border-box;
+
+            @include xs-block {
+                width: 100%;
+            }
+        }
     }
 
     .form {
@@ -609,6 +642,47 @@ body.static .aboutus {
 
         .input-textarea {
             height: 100px;
+        }
+    }
+
+    .info-line {
+        margin-bottom: 30px;
+
+        @include sm-block {
+            text-align: center;
+        }
+
+        .heading {
+            font-size: 32px;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+
+        .value {
+            font-size: 20px;
+        }
+    }
+
+    .socials {
+        a {
+            color: #000;
+            font-weight: normal;
+            margin-right: 15px;
+            font-size: 27px;
+            padding: .2em;
+            text-align: center;
+            transition: border .3s ease;
+            border-bottom: 2px solid transparent;
+
+            &:hover {
+                border-color: #000;
+            }
+
+            @include sm-block {
+                font-size: 20px;
+                margin-right: 10px;
+            }
         }
     }
 

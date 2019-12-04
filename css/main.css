@@ -507,11 +507,52 @@ body.static .aboutus .content {
   }
 }
 
-.contact-form .title-primary {
-  margin-bottom: 50px;
+.contacts .section-content {
+  -webkit-box-pack: start !important;
+      -ms-flex-pack: start !important;
+          justify-content: flex-start !important;
+  padding-top: 10vh !important;
 }
 
-.contact-form .form {
+.contacts .title-primary {
+  margin-bottom: 50px;
+  width: 100%;
+}
+
+.contacts .row-inner {
+  width: 100%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.contacts .contact-form,
+.contacts .contact-info {
+  width: 45%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@media screen and (max-width: 768px) {
+  .contacts .contact-form,
+  .contacts .contact-info {
+    width: 100%;
+    padding-bottom: 50px;
+  }
+}
+
+.contacts .contact-info .info-line {
+  width: 50%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@media screen and (max-width: 576px) {
+  .contacts .contact-info .info-line {
+    width: 100%;
+  }
+}
+
+.contacts .form {
   max-width: 95%;
   width: 600px;
   margin: 0 auto;
@@ -519,7 +560,7 @@ body.static .aboutus .content {
           box-sizing: border-box;
 }
 
-.contact-form .form-input {
+.contacts .form-input {
   padding: 12px 13px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -529,84 +570,127 @@ body.static .aboutus .content {
   width: 100%;
 }
 
-.contact-form .form-input:focus {
+.contacts .form-input:focus {
   outline: none;
   border-color: #000;
 }
 
 @media screen and (max-width: 576px) {
-  .contact-form .form {
+  .contacts .form {
     padding: 0;
     width: 95%;
   }
 }
 
-.contact-form .form label {
+.contacts .form label {
   position: relative;
   margin-bottom: 40px;
 }
 
 @media screen and (max-width: 576px) {
-  .contact-form .form label {
+  .contacts .form label {
     margin-bottom: 33px;
   }
 }
 
-.contact-form .form .errorField {
+.contacts .form .errorField {
   position: absolute;
   top: 100%;
   left: 0;
 }
 
-.contact-form .form .errorField span {
+.contacts .form .errorField span {
   display: none;
 }
 
-.contact-form .form .errorField.empty .empty {
+.contacts .form .errorField.empty .empty {
   display: block;
 }
 
-.contact-form .form .errorField.numbers .numbers {
+.contacts .form .errorField.numbers .numbers {
   display: block;
 }
 
-.contact-form .form .errorField.length .length {
+.contacts .form .errorField.length .length {
   display: block;
 }
 
-.contact-form .form .errorField.letters .letters {
+.contacts .form .errorField.letters .letters {
   display: block;
 }
 
-.contact-form .form .errorField.validEmail .validEmail {
+.contacts .form .errorField.validEmail .validEmail {
   display: block;
 }
 
-.contact-form .form .text-center {
+.contacts .form .text-center {
   width: 100%;
 }
 
-.contact-form .form .label-name,
-.contact-form .form .label-phone {
+.contacts .form .label-name,
+.contacts .form .label-phone {
   width: 45%;
 }
 
 @media screen and (max-width: 576px) {
-  .contact-form .form .label-name,
-  .contact-form .form .label-phone {
+  .contacts .form .label-name,
+  .contacts .form .label-phone {
     width: 100%;
   }
 }
 
-.contact-form .form .label-email {
+.contacts .form .label-email {
   width: 100%;
 }
 
-.contact-form .form .label-textarea {
+.contacts .form .label-textarea {
   width: 100%;
 }
 
-.contact-form .form .input-textarea {
+.contacts .form .input-textarea {
   height: 100px;
+}
+
+.contacts .info-line {
+  margin-bottom: 30px;
+}
+
+@media screen and (max-width: 768px) {
+  .contacts .info-line {
+    text-align: center;
+  }
+}
+
+.contacts .info-line .heading {
+  font-size: 32px;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.contacts .info-line .value {
+  font-size: 20px;
+}
+
+.contacts .socials a {
+  color: #000;
+  font-weight: normal;
+  margin-right: 15px;
+  font-size: 27px;
+  padding: .2em;
+  text-align: center;
+  -webkit-transition: border .3s ease;
+  transition: border .3s ease;
+  border-bottom: 2px solid transparent;
+}
+
+.contacts .socials a:hover {
+  border-color: #000;
+}
+
+@media screen and (max-width: 768px) {
+  .contacts .socials a {
+    font-size: 20px;
+    margin-right: 10px;
+  }
 }
 /*# sourceMappingURL=main.css.map */

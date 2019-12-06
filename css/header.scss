@@ -49,13 +49,10 @@ header {
             color: #fff !important;
         }
 
-        #fp-nav ul li a span {
+        #fp-nav ul li a span,
+        #fp-nav ul li a span::before,
+        #fp-nav ul li a span::after {
             background: #fff !important;
-
-            &::before,
-            &::after {
-                background: #fff !important;
-            }
         }
     }
 

@@ -185,7 +185,7 @@ body:not(.static) {
         opacity: 1;
     }
     .section-content {
-        padding: 0 5vw;
+        padding: 50px 5vw;
         box-sizing: border-box;
         min-height: 100vh;
         display: flex;
@@ -394,7 +394,7 @@ body.static .aboutus {
     }
     .title-primary {
         margin-top: 4vh;
-        margin-bottom: 10vh;
+        margin-bottom: 7vh;
     }
     .item {
         @include col();
@@ -445,13 +445,33 @@ body.static .aboutus {
     opacity: 1 !important;
 }
 
+.socials {
+    a {
+        color: #000;
+        font-weight: normal;
+        margin-right: 10px;
+        font-size: 27px;
+        padding: .2em;
+        text-align: center;
+        transition: border .3s ease;
+        border-bottom: 2px solid transparent;
+        &:hover {
+            border-color: #000;
+        }
+        @include sm-block {
+            font-size: 20px;
+            margin-right: 10px;
+        }
+    }
+}
+
 .contacts {
     .section-content {
         justify-content: flex-start !important;
         padding-top: 10vh !important;
     }
     .title-primary {
-        margin-bottom: 50px;
+        margin-bottom: 3vh;
         width: 100%;
     }
     .row-inner {
@@ -558,36 +578,16 @@ body.static .aboutus {
         }
     }
     .info-line {
-        margin-bottom: 30px;
+        margin-bottom: 3vh;
         @include sm-block {
             text-align: center;
         }
         .heading {
-            font-size: 32px;
+            font-size: 20px;
             line-height: 1.2;
-            margin-bottom: 20px;
         }
         .value {
-            font-size: 20px;
-        }
-    }
-    .socials {
-        a {
-            color: #000;
-            font-weight: normal;
-            margin-right: 15px;
-            font-size: 27px;
-            padding: .2em;
-            text-align: center;
-            transition: border .3s ease;
-            border-bottom: 2px solid transparent;
-            &:hover {
-                border-color: #000;
-            }
-            @include sm-block {
-                font-size: 20px;
-                margin-right: 10px;
-            }
+            font-size: 15px;
         }
     }
     .map {
@@ -595,7 +595,7 @@ body.static .aboutus {
             width: 90%;
             display: block;
             margin: 0 auto;
-            height: 300px;
+            height: 30vh;
             border-radius: 3px;
             border: 2px solid #f7a024;
             @include xs-block {
@@ -605,6 +605,86 @@ body.static .aboutus {
     }
 }
 
-footer.footer .section-content {
-    min-height: auto !important;
+footer.footer {
+    background: #2d3136;
+    padding: 30px;
+
+    .section-content {
+        min-height: auto !important;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    .mt30 {
+        margin-top: 30px;
+    }
+
+    .socials {
+        text-align: center;
+
+        a {
+            color: #fff;
+
+            &:hover {
+                border-color: #fff;
+            }
+        }
+    }
+
+    .nav-footer {
+        width: 1000px;
+        max-width: 90%;
+        margin: 0 auto;
+
+        .logo a {
+            font-size: 18px;
+            color: #fff;
+        }
+
+        .phone-call a {
+            display: block;
+            font-size: 20px;
+            color: #fff;
+        }
+
+        .links a {
+            font-size: 18px;
+            color: #fff;
+            display: inline-block;
+            margin: 0 10px;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    @include sm-block {
+        .flex-between {
+            display: block !important;
+        }
+
+        .logo {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .links {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .phone-call {
+            text-align: center;
+        }
+
+        .socials {
+            margin-top: 20px;
+            a {
+                margin: 0 5px;
+            }
+        }
+    }
 }

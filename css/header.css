@@ -55,11 +55,9 @@ header .btn-primary {
   color: #fff !important;
 }
 
-.navbar.modalOpened #fp-nav ul li a span {
-  background: #fff !important;
-}
-
-.navbar.modalOpened #fp-nav ul li a span::before, .navbar.modalOpened #fp-nav ul li a span::after {
+.navbar.modalOpened #fp-nav ul li a span,
+.navbar.modalOpened #fp-nav ul li a span::before,
+.navbar.modalOpened #fp-nav ul li a span::after {
   background: #fff !important;
 }
 

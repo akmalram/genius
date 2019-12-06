@@ -69,7 +69,6 @@ ready(() => {
         navigation: true,
         scrollingSpeed: 800,
         navigationPosition: 'left',
-        verticalCentered: false,
         onLeave: (origin, destination) => {
             const sections = document.querySelectorAll('#fullpage > .section').length;
             for (let i = 1; i <= sections; i++) {
@@ -91,7 +90,8 @@ ready(() => {
         $('body').addClass('static');
         $('.menu-modal .link').on('click', () => {
             menuClose();
-        })
+        });
+        fullpg.reBuild();
     } else {
         const fpMoveTo = (link, index) => {
             $(link).on('click', (e) => {

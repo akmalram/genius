@@ -42,7 +42,7 @@
     var TABLE_CELL = 'fp-tableCell';
     var TABLE_CELL_SEL = '.' + TABLE_CELL;
     var AUTO_HEIGHT = 'fp-auto-height';
-    var AUTO_HEIGHT_SEL = 'fp-auto-height';
+    var AUTO_HEIGHT_SEL = '.fp-auto-height';
     var AUTO_HEIGHT_RESPONSIVE = 'fp-auto-height-responsive';
     var AUTO_HEIGHT_RESPONSIVE_SEL = '.' + AUTO_HEIGHT_RESPONSIVE;
     var NORMAL_SCROLL = 'fp-normal-scroll';

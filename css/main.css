@@ -22,7 +22,7 @@ body.static #fp-nav {
 }
 
 body.static .header {
-  background: url(../img/header-bg.jpg) no-repeat center center;
+  background: url(../img/office-violet.jpg) no-repeat center center;
   background-size: cover;
   -webkit-box-shadow: inset 0 0 1000rem 1000rem rgba(0, 0, 0, 0.4);
           box-shadow: inset 0 0 1000rem 1000rem rgba(0, 0, 0, 0.4);
@@ -140,6 +140,10 @@ body:not(.static).active-section-4 .navbar .togglebtn .line {
 
 body:not(.static).active-section-4 .navbar .togglebtn .line::before, body:not(.static).active-section-4 .navbar .togglebtn .line::after {
   background: var(--primary-color);
+}
+
+body:not(.static).active-section-4 .background-full .background-full-sections.courses {
+  opacity: 1;
 }
 
 body:not(.static).active-section-5 .background-full .background-full-sections.advantages {
@@ -463,6 +467,7 @@ body.static .aboutus .content {
   width: calc(25% - 30px);
   max-width: 300px;
   text-align: center;
+  padding: 30px;
 }
 
 @media screen and (max-width: 768px) {
@@ -513,6 +518,10 @@ body.static .aboutus .content {
   .preferences .item {
     margin-bottom: 30px;
   }
+}
+
+.contacts.section {
+  opacity: 1 !important;
 }
 
 .contacts .section-content {
@@ -715,5 +724,9 @@ body.static .aboutus .content {
   .contacts .map iframe {
     height: 200px;
   }
+}
+
+footer.footer .section-content {
+  min-height: auto !important;
 }
 /*# sourceMappingURL=main.css.map */

@@ -44,6 +44,21 @@ header {
     z-index: 111;
     transition: all .5s ease;
 
+    &.modalOpened {
+        .logo a {
+            color: #fff !important;
+        }
+
+        #fp-nav ul li a span {
+            background: #fff !important;
+
+            &::before,
+            &::after {
+                background: #fff !important;
+            }
+        }
+    }
+
     &.scrolled {
         background: #fff;
         border-bottom: 2px solid #000;
@@ -119,6 +134,8 @@ header {
                 font-size: 48px;
                 color: #fff;
                 line-height: 1.6;
+                cursor: pointer;
+                position: relative;
 
                 transition: opacity .5s ease-in-out;
                 will-change: opacity;
@@ -129,6 +146,23 @@ header {
                 }
                 @include xs-block {
                     font-size: 30px;
+                }
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    display: block;
+                    height: 3px;
+                    bottom: -5px;
+                    left: 50%;
+                    right: 50%;
+                    transition: all .3s ease;
+                    background-color: #fff;
+                }
+
+                &:hover::before {
+                    left: 0;
+                    right: 0;
                 }
             }
 

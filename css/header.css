@@ -51,6 +51,18 @@ header .btn-primary {
   transition: all .5s ease;
 }
 
+.navbar.modalOpened .logo a {
+  color: #fff !important;
+}
+
+.navbar.modalOpened #fp-nav ul li a span {
+  background: #fff !important;
+}
+
+.navbar.modalOpened #fp-nav ul li a span::before, .navbar.modalOpened #fp-nav ul li a span::after {
+  background: #fff !important;
+}
+
 .navbar.scrolled {
   background: #fff;
   border-bottom: 2px solid #000;
@@ -135,6 +147,8 @@ header .btn-primary {
   font-size: 48px;
   color: #fff;
   line-height: 1.6;
+  cursor: pointer;
+  position: relative;
   -webkit-transition: opacity .5s ease-in-out;
   transition: opacity .5s ease-in-out;
   will-change: opacity;
@@ -151,6 +165,24 @@ header .btn-primary {
   .navbar .menu-modal .list .link {
     font-size: 30px;
   }
+}
+
+.navbar .menu-modal .list .link::before {
+  content: '';
+  position: absolute;
+  display: block;
+  height: 3px;
+  bottom: -5px;
+  left: 50%;
+  right: 50%;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+  background-color: #fff;
+}
+
+.navbar .menu-modal .list .link:hover::before {
+  left: 0;
+  right: 0;
 }
 
 .navbar .menu-modal .list .link.link-1 {

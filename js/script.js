@@ -4,36 +4,64 @@ const ready = (callback) => {
     })
 }
 
-ready(() => {
-    const MenuClassToggler = () => {
-        const btn = document.querySelector('.navbar .togglebtn');
-        const menu = document.querySelector('.navbar .menu-modal');
+const menuClose = () => {
+    document.querySelector('.navbar .togglebtn').classList.remove('active');
+    document.querySelector('.navbar .menu-modal').classList.remove('active');
+    document.querySelector('.navbar').classList.remove('modalOpened');
+}
 
-        btn.addEventListener('click', () => {
-            btn.classList.toggle('active');
-            menu.classList.toggle('active');
-            // document.querySelector('body').classList.toggle('overhidden');
+ready(() => {
+    const modalbtn = document.querySelector('.navbar .togglebtn');
+    const modalmenu = document.querySelector('.navbar .menu-modal');
+    const navbar = document.querySelector('.navbar');
+    const MenuClassToggler = () => {
+        modalbtn.addEventListener('click', () => {
+            modalbtn.classList.toggle('active');
+            modalmenu.classList.toggle('active');
+            navbar.classList.toggle('modalOpened');
         });
     }
 
     MenuClassToggler();
+
+    const menuClose = () => {
+        document.querySelector('.navbar .togglebtn').classList.remove('active');
+        document.querySelector('.navbar .menu-modal').classList.remove('active');
+        document.querySelector('.navbar').classList.remove('modalOpened');
+    }
 });
 
 ready(() => {
     const element = document.querySelector('.navbar');
     window.addEventListener('scroll', () => {
-        if(screen.width < 768 && window.pageYOffset > 0) {
+        if (screen.width < 768 && window.pageYOffset > 0) {
             element.classList.add('scrolled');
-        }else if (screen.width < 768 &&  window.pageYOffset < 200) {
+        } else if (screen.width < 768 && window.pageYOffset < 200) {
             element.classList.remove('scrolled');
         }
     });
 
-    if(screen.width < 768 && window.pageYOffset > 0) {
+    if (screen.width < 768 && window.pageYOffset > 0) {
         element.classList.add('scrolled');
-    }else if (screen.width < 768 &&  window.pageYOffset < 200) {
+    } else if (screen.width < 768 && window.pageYOffset < 200) {
         element.classList.remove('scrolled');
     }
+});
+
+ready(() => {
+    const form = document.querySelector('.form');
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        $.ajax({
+                method: "POST",
+                url: "../send.php",
+                data: $('.form').serialize(),
+            })
+            .done(function() {
+                form.reset();
+                alert('Ваша заявка принята!')
+            });
+    });
 });
 
 ready(() => {
@@ -43,7 +71,8 @@ ready(() => {
         navigationPosition: 'left',
         verticalCentered: false,
         onLeave: (origin, destination) => {
-            for (let i = 1; i <= 4; i++) {
+            const sections = document.querySelectorAll('#fullpage > .section').length;
+            for (let i = 1; i <= sections; i++) {
                 $('body').removeClass(`active-section-${i}`);
             }
             $('body').addClass(`active-section-${destination.index + 1}`);
@@ -57,10 +86,28 @@ ready(() => {
             $('body').addClass(`animate-${origin.index + 1}`);
         },
     });
-    if(screen.width < 1024) {
+    if (screen.width < 1024) {
         fullpg.destroy();
         $('body').addClass('static');
+        $('.menu-modal .link').on('click', () => {
+            menuClose();
+        })
+    } else {
+        const fpMoveTo = (link, index) => {
+            $(link).on('click', (e) => {
+                e.preventDefault();
+                fullpg.moveTo(index, 0);
+                document.querySelector('.navbar .togglebtn').classList.remove('active');
+                document.querySelector('.navbar .menu-modal').classList.remove('active');
+            });
+        }
+
+        fpMoveTo('.menu-modal .link-aboutus', 2);
+        fpMoveTo('.menu-modal .link-courses', 3);
+        fpMoveTo('.menu-modal .link-advantages', 4);
+        fpMoveTo('.menu-modal .link-contacts', 5);
     }
+
 
 });
 

@@ -106,6 +106,7 @@ ready(() => {
         fpMoveTo('.menu-modal .link-courses', 3);
         fpMoveTo('.menu-modal .link-advantages', 4);
         fpMoveTo('.menu-modal .link-contacts', 5);
+        fpMoveTo('.toContacts', 5);
     }
 
 

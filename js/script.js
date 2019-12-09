@@ -108,8 +108,6 @@ ready(() => {
         fpMoveTo('.menu-modal .link-contacts', 5);
         fpMoveTo('.toContacts', 5);
     }
-
-
 });
 
 const fontAwesomeFreeObserver = new FontFaceObserver('Font Awesome 5 Free');
